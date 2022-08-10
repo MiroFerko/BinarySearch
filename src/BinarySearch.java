@@ -16,6 +16,7 @@ public class BinarySearch {
         }
         return index;
     }
+
         public static void main(String args[])
         {
             BinarySearch ob = new BinarySearch();
