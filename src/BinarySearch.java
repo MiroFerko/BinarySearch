@@ -1,33 +1,21 @@
 public class BinarySearch {
-    public int runBinarySearchIteratively(
-            int[] sortedArray, int key, int low, int high) {
-        int index = Integer.MAX_VALUE;
-
-        while (low <= high) {
-            int mid = low  + ((high - low) / 2);
-            if (sortedArray[mid] < key) {
-                low = mid + 1;
-            } else if (sortedArray[mid] > key) {
-                high = mid - 1;
-            } else if (sortedArray[mid] == key) {
-                index = mid;
-                break;
-            }
-        }
-        return index;
+    public static void main(String[] args) {
+        int[] testA = {1, 4, 6, 10, 22, 34, 65, 99};
+        System.out.println("Position of the number in array is " + (binarySearch(testA, 34)+1));
     }
 
-        public static void main(String args[])
-        {
-            BinarySearch ob = new BinarySearch();
-            int sortedArray[] = { 2, 3, 4, 10, 30 };
-            int n = sortedArray.length;
-            int x = 10;
-            int result = ob.runBinarySearchIteratively(sortedArray, 0, n - 1, x);
-            if (result == -1)
-                System.out.println("Element not present");
+    public static int binarySearch(int[] values, int x) {
+        int start = 0;
+        int end = values.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (values[mid] == x)
+                return mid;
+            else if (values[mid] < x)
+                start = mid + 1;
             else
-                System.out.println("Element found at index "
-                        + result);
+                end = mid - 1;
         }
+        return -1;
     }
+}
