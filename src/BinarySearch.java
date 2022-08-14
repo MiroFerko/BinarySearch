@@ -4,6 +4,7 @@ public class BinarySearch {
         System.out.println("Position of the number in array is " + (runBinarySearch(sortedArray, 34, 0, sortedArray.length) + 1));
     }
 
+
     public static int runBinarySearch(
             int[] sortedArray, int key, int low, int high) {
         int index = Integer.MAX_VALUE;
