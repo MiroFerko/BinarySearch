@@ -10,7 +10,6 @@ public class BinarySearch {
 
 
 
-
     //iterative BinarySearch method with high, low and middle positions
     public static int runBinarySearch(
             int[] sortedArray, int key, int low, int high) {
