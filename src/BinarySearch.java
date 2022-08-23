@@ -6,10 +6,6 @@ public class BinarySearch {
         System.out.println("Position of the number in array is " + (runBinarySearch(sortedArray, 34, 0, sortedArray.length) + 1));
     }
 
-
-
-
-
     //iterative BinarySearch method with high, low and middle positions
     public static int runBinarySearch(
             int[] sortedArray, int key, int low, int high) {
